@@ -107,6 +107,7 @@ public:
         pchMessageStart[3] = 0xac;  // <--Einsteinium: OK
         nDefaultPort = 41878;       // <--Einsteinium: OK
         nPruneAfterHeight = 100000;
+        nNlrLimit = 100; // 100 * ~40s = ~66 minutes
 
         genesis = CreateGenesisBlock("NY Times 19/Feb/2014 North Korea Arrests Christian Missionary From Australia", CScript() << OP_DUP << OP_HASH160 << ParseHex("1cec44c9f9b769ae08ebf9d694c7611a16edf615") << OP_EQUALVERIFY << OP_CHECKSIG, 1392841423, 3236648, 0x1e0ffff0, 1, 50 * COIN); // <--Einsteinium: OK
         consensus.hashGenesisBlock = genesis.GetHash();
@@ -202,6 +203,7 @@ public:
         pchMessageStart[3] = 0xc1;  // <--Einsteinium: OK
         nDefaultPort = 31878;       // <--Einsteinium: OK
         nPruneAfterHeight = 1000;
+        nNlrLimit = 50; // 50 * ~40s = ~33 minutes
 
         genesis = CreateGenesisBlock("NY Times 19/Feb/2014 North Korea Arrests Christian Missionary From Australia", CScript() << OP_DUP << OP_HASH160 << ParseHex("1cec44c9f9b769ae08ebf9d694c7611a16edf615") << OP_EQUALVERIFY << OP_CHECKSIG, 1494757042, 2231829, 0x1e0ffff0, 1, 50 * COIN); // <--Einsteinium: OK
         consensus.hashGenesisBlock = genesis.GetHash();
@@ -284,6 +286,7 @@ public:
         pchMessageStart[3] = 0xda;
         nDefaultPort = 31880;
         nPruneAfterHeight = 1000;
+        nNlrLimit = 10;
 
 
         /**
